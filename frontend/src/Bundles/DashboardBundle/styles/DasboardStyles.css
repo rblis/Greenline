@@ -1,0 +1,68 @@
+.dashboard {
+    margin: 5em;
+    width: 90%;
+    height: 90%;
+    background-color: beige;
+    position: absolute;
+    border-radius: .5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    color: antiquewhite;
+}
+
+.addStock {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 2;
+    justify-self: stretch;
+    background-color: #043b30;
+    border-radius: .5em;
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll {
+    overflow-y:auto;
+}
+
+.addStockForm {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+    padding: 1em;
+}
+
+.stockDetail {
+    background-color: #043b30;
+    grid-row: 1 / span 2;
+    grid-column: 3 / span 2;
+    border-radius: .5em;
+    margin: 1em;
+}
+
+.stockGraph {
+    background-color: #043b30;
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+    border-radius: .5em;
+    margin: 1em;
+}
+
+.portfolioView {
+    background-color: #043b30;
+    grid-row: 4 / span 2;
+    grid-column: 2 / span 3;
+    border-width: thick;
+    border-color: black;
+    border-radius: .5em;
+    margin: 1em;
+    overflow: auto;
+}
+
+.stockSearchItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
