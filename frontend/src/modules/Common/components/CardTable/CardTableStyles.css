@@ -1,0 +1,35 @@
+.card_table_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: darkslategrey solid .1em;
+    padding-bottom: .5em;
+}
+
+.card_table_header_item {
+    flex: 1;
+    border-left: darkslategrey solid thin;
+    text-align: center;
+}
+
+.card_table_cell_item_ends {
+    flex: 1;
+    text-align: center;
+}
+
+.card_table_cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.card_table_cell_item {
+    flex: 1;
+}
+
+.table {
+    height: 100%;
+    width: 100%;
+}

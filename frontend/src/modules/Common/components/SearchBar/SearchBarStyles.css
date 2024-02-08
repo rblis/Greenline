@@ -1,0 +1,39 @@
+.search_bar_txt {
+    font-size: 2em;
+    flex: 1;
+    border-radius: .15em 0 0 .15em;
+    padding: .15em .5em;
+}
+
+.search_bar_text {
+    margin: 1em 1em 0 1em;
+}
+
+.search_bar_btn {
+    font-size: 2em;
+    margin: 0 .05em 0 .05em;
+    background-color: darkslategrey;
+    color: beige;
+    border-radius: 0 .15em .15em 0;
+}
+
+.search_bar_results {
+    border: darkslategrey ridge thin;
+    border-radius: .5em;
+    padding: .5em;
+    margin: 0 1em 1em 1em;
+    flex: 1;    
+    z-index: 10;
+    position: absolute;
+}
+
+.search_bar_results_container {
+    position: relative;
+}
+
+.blursed {
+    background-color: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}

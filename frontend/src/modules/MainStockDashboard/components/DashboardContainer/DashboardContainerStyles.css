@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Rajdhani&family=Rubik:wght@300&display=swap');
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    text-align: center;
+}
+
+.font1 {
+    font-family: 'DM Serif Text', sans-serif;
+    color: darkslategrey;
+}
+
+.font2 {
+    font-family: 'Rubik', sans-serif;
+    color: darkslategrey;
+}
+
+.dashboard_window {
+    height: 80%;
+    width: 70%;
+    margin: 5% 15% 20% 15%;
+    background-color: beige;
+    float: left;
+    position: absolute;
+    box-shadow: 0 0 1em .125em aquamarine;
+    border-radius: .25em;
+    padding: 1em;
+}
+
+.stock_lists {
+    border: darkslategrey solid thin;
+    border-radius: .5em;
+    padding: .5em;
+    margin: 1em;
+}
