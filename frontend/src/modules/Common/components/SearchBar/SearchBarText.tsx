@@ -11,15 +11,14 @@ function SearchBarText({setQuery, search}: Props) {
     
     function setSearchQuery(e: any) {
         console.log('setting search bar text', e.target.value);
-        if (e.target.value === "") return;
-        setQuery(e.target.value);
-        setText(e.target.value);
-    }    
+        setQuery(e.target.value);//for logical use
+        setText(e.target.value); // for local visual use
+    }
     useEffect(() => {search();}, [text]);
     
     
     return (
-        <div className={'search_bar_text flex_row'}>
+        <div className={'search_bar_input flex_row'}>
             <input 
                 className={'search_bar_txt font1'} 
                 type={'text'} 

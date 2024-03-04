@@ -1,12 +1,12 @@
+.search_bar_input {
+    margin: 1em 1em 0 1em;
+}
+
 .search_bar_txt {
     font-size: 2em;
     flex: 1;
     border-radius: .15em 0 0 .15em;
     padding: .15em .5em;
-}
-
-.search_bar_text {
-    margin: 1em 1em 0 1em;
 }
 
 .search_bar_btn {
@@ -22,13 +22,15 @@
     border-radius: .5em;
     padding: .5em;
     margin: 0 1em 1em 1em;
-    flex: 1;    
     z-index: 10;
     position: absolute;
+    flex: 1;
+    align-items: stretch;
 }
 
 .search_bar_results_container {
     position: relative;
+    justify-items: stretch;
 }
 
 .blursed {
@@ -37,3 +39,17 @@
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     border-radius: 5px;
 }
+
+.dri {
+    flex: 1;
+}
+
+.cont {
+    background: red;
+}
+
+.flex_just_center {
+    justify-content: space-between;
+    column-gap: 1em;
+}
+
