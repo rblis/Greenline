@@ -23,6 +23,8 @@
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+    padding: .5em;
+    margin: .5em;
 }
 
 .card_table_cell_item {
@@ -32,4 +34,17 @@
 .table {
     height: 100%;
     width: 100%;
+}
+
+.table_row:hover {
+    background-color: darkslategrey;
+    color: bisque;
+    border-radius: .5em;
+    font-weight: bolder;
+    box-shadow: 0 0 1em .125em aquamarine;
+}
+
+.table_row:active {
+    background-color: cadetblue;
+    box-shadow: 0 0 1em .125em blue;
 }

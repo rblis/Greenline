@@ -4,7 +4,8 @@ import {flexRender, getCoreRowModel, useReactTable} from "@tanstack/react-table"
 
 interface Props {
     columns: any,
-    rawData: any    
+    rawData: any,
+    clickHandler: Function
 }
 
 type Column = {
@@ -13,7 +14,7 @@ type Column = {
     cell: any
 }
 
-function CardTable({columns, rawData}: Props) {      
+function CardTable({columns, rawData, clickHandler}: Props) {      
 
     const [data, setData] = useState(rawData);
     const initialState = {
@@ -28,8 +29,14 @@ function CardTable({columns, rawData}: Props) {
        initialState
     }); 
     
-    function checkEnds(index: number) {
+    const checkEnds = (index: number)  => {
         return index != 0 ? 'card_table_header_item' :  'card_table_cell_item_ends';
+    }
+    
+    const clickItem = (e: React.MouseEvent<HTMLTableRowElement, MouseEvent>, row: any) => {
+        e.preventDefault();
+        console.log('row', row.original.symbol);
+        clickHandler(row.original.symbol);
     }
     
     return (
@@ -47,7 +54,7 @@ function CardTable({columns, rawData}: Props) {
             </thead>
             <tbody>
                 {table.getRowModel().rows.map((row: any, index: number) => (
-                    <tr className={'card_table_cell'} key={index}>
+                    <tr className={'card_table_cell table_row'} key={index} onClick={(e) => clickItem(e, row)}>
                         {row.getVisibleCells().map((cell: any, index: number) => (
                             <td className={'card_table_cell_item'} key={index}>
                                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
