@@ -1,5 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Rajdhani&family=Rubik:wght@300&display=swap');
+
+
+:root {
+    --sz1: 1em;
+    --sz125: 1.25em;
+    --sz15: 1.5em;
+    --sz175: 1.75em;
+}
+
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    text-align: center;
+}
+
+.font1 {
+    font-family: 'DM Serif Text', sans-serif;
+    color: darkslategrey;
+}
+
+.font2 {
+    font-family: 'Rubik', sans-serif;
+    color: darkslategrey;
+}
+
 .root_background {
     background-color: darkslategrey;
     height: 100vh;
     width: 100vw;
+}
+
+.font_1 {
+    font-size: 1em;
+}
+
+.font_125 {
+    font-size: 1.25em;
+}
+
+.font_15 {
+    font-size: 1.5em;
+}
+
+.font_2 {
+    font-size: 2em;
+}
+
+.font_3 {
+    font-size: 3em;
+}
+
+.font_4 {
+    font-size: 4em;
+}
+
+.font_5 {
+    font-size: 5em;
+}
+
+.font_6 {
+    font-size: 6em;
+}
+
+.margin_lr_s {
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+}
+
+.margin_lr_m {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.margin_lr_l {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.max_size100 {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.max_size75 {
+    max-height: 75%;
+    max-width: 75%;
+}
+
+.max_size50 {
+    max-height: 50%;
+    max-width: 50%;
+}
+
+.grid3f2f {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.gcs1 {
+    grid-column-start: 1;
+}
+
+.gcs2 {
+    grid-column-start: 2;
+}
+
+
+.gcs3 {
+    grid-column-start: 3;
+}
+
+.gcs4 {
+    grid-column-start: 4;
+}
+
+.gcs5 {
+    grid-column-start: 5;
+}
+
+.hover {
+    padding-left: .25em;
+    padding-right: .25em;
+}
+
+.hover:hover
+{
+    background-color: darkslategrey;
+    color: bisque;
+    box-shadow: 0 0 1em .125em aquamarine;
+    border-radius: .25em;
+}
+
+.hover:active {
+    background-color: cadetblue;
+    box-shadow: 0 0 1em .125em blue;
+}
+
+.round_borders {
+    border: darkslategrey solid thin;
+    border-radius: .5em;
+    padding: .5em;
+    margin: 1em;
 }
