@@ -1,6 +1,8 @@
 using backend.database;
 using backend.modules.Stock.Model.Hydrator;
+using backend.modules.Stock.Model.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.modules.Stock.Controller;
 
@@ -8,26 +10,27 @@ namespace backend.modules.Stock.Controller;
 [ApiController]
 public class StockController : ControllerBase
 {
-    private readonly ApplicationDbContext db;
+    private readonly StockRepo repo;
     
     
-    public StockController(ApplicationDbContext db)
+    public StockController(StockRepo repo)
     {
-        this.db = db;
+        this.repo = repo;
     }
     
     [HttpGet]
-    public IActionResult getAllStocks()
+    public async Task<IActionResult> getAllStocks()
     {
-        var stocks = db.Stocks.ToList().Select(s => s.hydrateStock());
-        return Ok(stocks);
+        var stocks = await repo.getAllStocks();
+        var stockDTO = stocks.Select(s => s.hydrateStock());
+        return Ok(stockDTO);
     }
 
     [HttpGet("{id}")]
-    public IActionResult getById([FromRoute] int id)
+    public async Task<IActionResult> getStockById([FromRoute] int id)
     {
-        var stocks = db.Stocks.Find(id);
+        var stocks = await repo.getStockById(id);
         
         return stocks == null ? NotFound() : Ok(stocks.hydrateStock());
     }
-}
+} 

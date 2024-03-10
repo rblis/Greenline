@@ -1,4 +1,5 @@
 using backend.database;
+using backend.modules.Stock.Model.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,7 @@ builder.Services.AddCors(options =>
         );
     }
 );
+builder.Services.AddScoped<StockRepo>();
 
 var app = builder.Build();
 

@@ -21,7 +21,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="modules\Stock\Model\Repository\" />
       <Folder Include="modules\Stock\Model\Service\" />
     </ItemGroup>
 
