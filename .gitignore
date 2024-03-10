@@ -16,3 +16,14 @@ bld/
 [Oo]bj/
 [Ll]og/
 
+# DNX
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+
+/backend/bin/Debug/
+/backend/.idea/
+/backend/obj/
+/backend/bin/
+/.idea/
