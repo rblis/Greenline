@@ -1,35 +1,26 @@
 import React from 'react';
-import {Simulate} from "react-dom/test-utils";
-import toggle = Simulate.toggle;
 
 interface Props {
     item: SearchItem,
-    toggle: Function
+    onClick: Function
 }
 
-interface SearchItem {
+export interface SearchItem {
     symbol: string,
     name: string,
     exch: string,
     exchDisp: string,
     type: string,
-    typeDisp: string,
-    
+    typeDisp: string,    
 }
 
-function StockSearchItem({item, toggle}: Props) {
-    
-    const selectItem = (item: SearchItem) => {
-        //e.preventDefault();
-        alert(item.name);
-        toggle(false);
-    }
+function StockSearchItem({item, onClick}: Props) {
     
     return (
-        <div className={'flex_row flex_just_center font_15 hover'} onClick={() => selectItem(item)}> 
-            <b>{item.symbol}</b>
-            <div className={'text_left margin_lr_l'}>{item.name}</div>
-            <div>{item.exchDisp}</div>
+        <div className={'grid1f3f1f flex_just_center font_15 hover'} onClick={() => onClick(item)}> 
+            <b className={'gcs1'}>{item.symbol}</b>
+            <div className={'gcs2 marg_lrl'}>{item.name}</div>
+            <div className={'gcs5'}>{item.exchDisp}</div>
         </div>
     );
 }

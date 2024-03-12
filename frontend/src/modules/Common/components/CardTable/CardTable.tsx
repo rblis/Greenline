@@ -40,7 +40,7 @@ function CardTable({columns, rawData, clickHandler}: Props) {
     }
     
     return (
-        <table className={'table flex_col'}>
+        <table className={'size100 flex_col'}>
             <thead>
                 {table.getHeaderGroups().map((group: any, index: number) => (
                     <tr className={'card_table_header'} key={index}>

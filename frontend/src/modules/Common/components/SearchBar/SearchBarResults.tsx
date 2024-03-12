@@ -1,41 +1,30 @@
-import React, {useEffect, useRef} from 'react';
+import React, {forwardRef, useEffect, useRef} from 'react';
 import './SearchBarStyles.css';
-import StockSearchItem from "./StockSearchItem";
+import StockSearchItem, {SearchItem} from "./StockSearchItem";
 
 interface Props {
     dropdownItems: any,
-    toggle: Function
+    toggle: Function,
+    modalToggle: Function,
 }
 
-function SearchBarResults({dropdownItems, toggle}: Props) {
-    const autoHideRef = useRef(null);
-    useEffect(() => {
-        document.addEventListener('mousedown', ev => {
-            // @ts-ignore
-            if (autoHideRef.current && !autoHideRef?.current.contains(ev.target)) {
-                toggle(false);
-            }
-        })
-    }, []);
+const SearchBarResults = forwardRef( ({dropdownItems, toggle, modalToggle}: Props, ref:any) => {
     
-    const hideResults = (e: React.FocusEvent<HTMLDivElement, Element>) => {
-        
-        // @ts-ignore
-        // if (!autoHideRef.current.contains(e.target)) {
-        // }
-        console.log('hiding');
+    const openAddStockModal = (item: SearchItem) => {
+        console.log('clicked', item.name, 'opening add stonk modal');
         toggle(false);
-    }
+        modalToggle(true);
+    };
     
     return (
-        <div ref={autoHideRef} className={'search_bar_results_container blursed flex_row cont'}>
-            <div className={'search_bar_results blursed flex_col'}>
+        <div ref={ref} className={'modal_container modal_bg flex_row'}>
+            <div className={'search_bar_results modal_bg flex_col'}>
                 {dropdownItems.map( (item: any, index:number) => 
-                    <StockSearchItem key={index} item={item} toggle={toggle}></StockSearchItem>
+                    <StockSearchItem key={index} item={item} onClick={openAddStockModal}></StockSearchItem>
                 )}               
             </div>
         </div>
     );
-}
+});
 
 export default SearchBarResults;

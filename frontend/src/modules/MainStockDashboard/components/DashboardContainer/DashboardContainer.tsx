@@ -22,7 +22,7 @@ function DashboardContainer({}: Props) {
     const [dropdownItems, setDropdownItems] = useState([]);
     
     const fetchOverview = async (symbol: string) => {
-        fetchStockOverview(symbol, setOverviewData);
+        await fetchStockOverview(symbol, setOverviewData);
         await fetchHistoricalPrices(symbol, setHistoricalPriceData);
     }
     
