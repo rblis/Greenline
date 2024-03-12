@@ -31,11 +31,6 @@
     flex: 1;
 }
 
-.table {
-    height: 100%;
-    width: 100%;
-}
-
 .table_row:hover {
     background-color: darkslategrey;
     color: bisque;
