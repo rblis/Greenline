@@ -1,0 +1,35 @@
+.grid3f2f {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.grid3f1f1f {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+
+.grid1f3f1f {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.gcs1 {
+    grid-column-start: 1;
+}
+
+.gcs2 {
+    grid-column-start: 2;
+}
+
+
+.gcs3 {
+    grid-column-start: 3;
+}
+
+.gcs4 {
+    grid-column-start: 4;
+}
+
+.gcs5 {
+    grid-column-start: 5;
+}

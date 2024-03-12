@@ -1,0 +1,81 @@
+/* Margins */
+
+.marg_lrs {
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+}
+
+.marg_lrm {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.marg_lrl {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.marg_ls {
+    margin-left: 1.25em;
+}
+
+.marg_lm {
+    margin-left: 1.5em;
+}
+
+.marg_ll {
+    margin-left: 2em;
+}
+
+.marg_rs {
+    margin-right: 1.25em;
+}
+
+.marg_rm {
+    margin-right: 1.5em;
+}
+
+.marg_rl {
+    margin-right: 2em;
+}
+
+/* Paddings */
+
+.pad_lrs {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+.pad_lrm {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.pad_lrl {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.pad_rs {
+    padding-right: 1.25em;
+}
+
+.pad_rm {
+    padding-right: 1.5em;
+}
+
+.pad_rl {
+    padding-right: 2em;
+}
+
+.pad_ls {
+    padding-left: 1.25em;
+}
+
+.pad_lm {
+    padding-left: 1.5em;
+}
+
+.pad_ll {
+    padding-left: 2em;
+}

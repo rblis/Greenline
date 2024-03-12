@@ -1,0 +1,10 @@
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
